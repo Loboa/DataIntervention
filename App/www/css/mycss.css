@@ -1,0 +1,273 @@
+
+#nav-panel {
+    margin-top:4rem;
+    background-color:#dbdbdb61;
+    outline: 0;
+    border-right-width:1px; 
+
+}
+
+#percentage{
+    position: absolute;
+    top:43%;
+    left:40%;
+    font-size:3.75rem;
+    color: white;
+    font-family: cursive;
+}
+
+#panelList{
+	margin-top: -35px;
+}
+
+#itemclass {
+	margin-top: -20px;
+}
+
+.ui-panel {
+	position: fixed;
+	width: 12em;
+}
+.ui-loader.ui-corner-all.ui-body-a.ui-loader-default{
+	display: none;
+}
+
+.navbar {
+	background-color:#787878;
+	font-weight: 200;
+	color:silver;
+	text-shadow: 0 0px 0 #eee0;
+}
+
+.navbar-brand {
+	margin-right: 6em;
+}
+
+.ui-panel-inner{
+	padding: 0em;
+}
+#menulist>li{
+	list-style-type: none;
+	background-color: #28a745;
+	border-width: 2px;
+	border-color: #000000;
+	margin:2px auto;
+}
+
+#menulist>li>a {
+	text-decoration: none;
+	border-width:0px;
+	box-decoration-break: inherit;
+	list-style-type: none;
+	color: inherit;
+	transition: .5s;
+	text-align: center;
+	border-color: black;
+    text-shadow:none;
+}
+
+
+
+.box {
+width:70%;
+height:200px;
+background:#FFF;
+margin:40px auto;
+}
+
+
+
+#dashboard {
+	
+	height: inherit;
+    background: url(images/blurriver.jpg) ;
+}
+#Subject1{
+    background: url(images/blurriver.jpg);
+}
+
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{
+	background-color: #fff;
+}
+
+.ui-page-theme-a .ui-btn:focus {
+	box-shadow: 0 0 12px #fff;
+}
+
+.ui-page-theme-a .ui-btn.ui-btn-a:active {
+	background-color:silver;
+	border-color :silver;
+}
+
+.ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay, .ui-panel-animate.ui-panel-position-left.ui-panel-display-push{
+	left:0px;
+}
+
+
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset{
+	margin: 0em 0px;
+}
+
+.ui-corner-all {
+	border-radius: 0em;
+}
+
+#classnames {
+	width: 80%;
+}
+
+#classnames.active{
+	color:#6610f2;
+}
+
+#sidecomment {
+	border-width: 10px;
+	border-color:#000;
+	border-radius: 5px;
+	text-align: center;
+	width:70%;
+background:#FFF;
+margin:40px auto;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+-moz-box-shadow: 0 10px 6px -6px #777;
+box-shadow: 0 10px 6px -6px #777;
+
+
+}
+
+#myChart {
+	background-color: #fff0;
+    height: 230px;
+    width: 250px;
+}
+
+#perc {
+	position: relative;
+}
+
+.ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page {
+	min-height: inherit;
+}
+
+/*These eare settnig for the panel list buttons*/
+#sub1-click{
+	background-color: #ff8389;
+	color:white;
+}
+
+#sub2-click{
+	background-color: #02bfdf;
+	color:white;
+}
+
+#sub3-click{
+	background-color: #fea23f;
+	color:white;
+}
+
+#sub4-click{
+	background-color: #449d4f;
+	color:white;
+}
+
+#sub5-click{
+	background-color: #7d4a83;
+	color:white;
+}
+
+#sub6-click{
+	background-color: #eacc5f;
+	color:white;
+}
+
+#sub7-click{
+	background-color: #496eb9;
+	color:white;
+}
+
+/* the pages CSS*/
+#Subject1{
+	background-color:#ff8389;
+
+}
+
+#Subject2{
+	background-color: #02bfdf;
+}
+
+#Subject3{
+	background-color: #fea23f;
+}
+
+#Subject4{
+	background-color: #449d4f;
+}
+
+#Subject5{
+	background-color: #7d4a83;
+}
+
+#Subject6{
+	background-color: #eacc5f;
+}
+
+#Subject7{
+	background-color: #496eb9;
+}
+
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+    .learner-tasks th.ui-table-priority-1,
+    .learner-tasks td.ui-table-priority-1 {
+        display: table-cell;
+    }
+}
+/* Show priority 2 at 560px (35em x 16px) */
+@media screen and (min-width: 35em) {
+    .learner-tasks th.ui-table-priority-2,
+    .learner-tasks td.ui-table-priority-2 {
+        display: table-cell;
+    }
+}
+/* Show priority 3 at 720px (45em x 16px) */
+@media screen and (min-width: 45em) {
+    .learner-tasks th.ui-table-priority-3,
+    .learner-tasks td.ui-table-priority-3 {
+        display: table-cell;
+    }
+}
+/* Manually hidden */
+.learner-tasks th.ui-table-cell-hidden,
+.learner-tasks td.ui-table-cell-hidden {
+    display: none;
+}
+/* Manually shown */
+.learner-tasks th.ui-table-cell-visible,
+.learner-tasks td.ui-table-cell-visible {
+    display: table-cell;
+}
+
+.learner-tasks{
+	font-size: 8pt;
+    background-color: #ffffff3d;
+    font-family: serif;
+    color:white;
+}
+
+.ui-table-columntoggle-btn{
+	visibility: hidden;
+}
+
+.ui-shadow {
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,.15);
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+    text-shadow: none;
+}
+.ui-page-theme-a {
+    text-shadow: none;
+}
+.ui-body-a{
+    color:#000;
+}

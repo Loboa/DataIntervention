@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Application</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/Chart.js"></script>
+</head>
+
+<body>
+    <!-- Start of first page -->
+    <div data-role="page" id="dashboard">
+        <div>
+            <div data-role="header" id="sidebar">
+                <nav class="navbar navbar-expand-xl navbar-light">
+                    <a href="#nav-panel" data-rel="menu" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-grid ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Menu
+                </a>
+                    <span class="label" id="names">Learner Name </span>
+                    <img src="images/person.png" width="30" height="30" class="d-inline-block align-top">
+            </nav>
+            </div><!-- /header -->
+            <div data-role="panel" data-display="overlay" data-theme="a" id="nav-panel">
+                <ul data-role="listview" id="menulist" data-inset="true" data-icon="false">
+                    <li><a href="#Subject1" title="one " id="sub1-click">Subject 1 </a></li>
+                    <li><a href="#Subject2" title="one " id="sub2-click">Subject 2</a></li>
+                    <li><a href="#Subject3" title="one " id="sub3-click">Subject 3</a></li>
+                    <li><a href="#Subject4" title="one " id="sub4-click">Subject 4 </a></li>
+                    <li><a href="#Subject5" title="one " id="sub5-click">Subject 5 </a></li>
+                    <li><a href="#Subject6" title="one " id="sub6-click">Subject 6</a></li>
+                    <li><a href="#Subject7" title="one " id="sub7-click">Subject 7 </a></li>
+                    <li><a href="#About" title="one " id="about-click">About</a></li>
+                    
+                    
+                </ul>
+                <!-- panel content goes here -->
+            </div><!-- /panel -->
+        </div>
+        <canvas id="myChart" width="400" height="350" >
+          
+            <script>
+            var graphy = document.getElementById("myChart");
+            var data = [80, 100-80];
+            var labels = ["Overall Performance"," "];
+            // Add data values to array
+            if (graphy.getContext) {
+                ctx = graphy.getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels:labels,
+                        datasets: [{
+                            label: "MyData",
+                            data: data, // Specify the data values array
+
+                            borderColor: ['green', 'blue'], // Add custom color border 
+                            backgroundColor: ['green', 'blue'], // Add custom color background (Points and Fill)
+                            borderWidth: 0.5, // Specify bar border width
+                            hoverBackgroundColor: ['green', 'blue'],
+                            hoverBorderColor: ['white', 'white',],
+                            hoverBorderWidth: 1,
+                            
+                        }]
+                    },
+                    options: {
+                        responsive: true, // Instruct chart js to respond nicely.
+                        maintainAspectRatio:true, // Add to prevent default behaviour of full - width / height
+                        cutoutPercentage:95,
+
+                    }
+                });
+            }
+            </script>
+            
+        </canvas>
+        <h3 id="percentage">76%</h3>
+        <aside id="sidecomment">
+            <p>Your performance has been great through out the year </p>
+        </aside>
+
+    </div>
+    </div>
+    <div data-role="page" id="Subject1">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 1</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	<div data-role="tabs" class="bg-transparent">
+        		<div data-role="navbar" >
+			        <ul>
+			          <li><a href="#one">Term 1</a></li>
+			          <li><a href="#two">Term 2</a></li>
+			          <li><a href="#three">Term 3</a></li>
+			        </ul>
+    			</div>
+			    <div id="one" class="ui-content">
+                    <div><p>Term One</p></div>
+                    <table data-role="table"  data-mode="columntoggle" class="learner-tasks ui-shadow table-stroke">
+     <thead>
+       <tr>
+         <th class="label">Task Name :</th>
+         <th>Status :</th>
+         <th>Your Mark:</th>
+        
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <th>Task One </th>
+         <td>Passed</td>
+         <td>67</td>
+       
+       </tr>
+       <tr>
+         <th>Task Two</th>
+         <td>Passed</td>
+         <td>87</td>
+      
+       </tr>
+       <tr>
+         <th>Task Three</th>
+         <td>Failed</td>
+         <td>41</td>
+       
+       </tr>
+       <tr>
+         <th>Task Four</th>
+         <td>Passed</td>
+         <td>67</td>
+        
+       </tr>
+       <tr>
+         <th>Task Five</th>
+         <td>Passed</td>
+         <td>67</td>
+      
+       </tr>
+       <tr>
+         <th>Task Six</th>
+         <td>Passed</td>
+         <td>67</td>
+  
+       </tr>
+       
+       <tr>
+         <th>Task Seven</th>
+         <td>Passed</td>
+         <td>67</td>
+
+       </tr>
+     </tbody>
+   </table>
+   <div>
+      <canvas id="cha">
+          <script type="text/javascript">
+              var graphy = document.getElementById("cha");
+            var data = [80, 56, 67, 78, 89, 92, 87];
+            var labels = ["Life Orientation", "Life Science", "Mathematics", "Geography", "IsiZulu", "English F.A.L", "Physical Science"];
+            // Add data values to array
+            if (graphy.getContext) {
+                ctx = graphy.getContext('2d');
+                var cha = new Chart(ctx, {
+                    "type": "bar",
+    "data": {
+        "labels": [
+            "Task One",
+            "Task Two",
+            "Task Three",
+            "Task Four",
+            "Task Five",
+            "Task Six",
+            "Task Seven"
+        ],
+        "datasets": [{
+            "label": "Term One",
+            "data": [65, 59, 80, 81, 56, 55, 40],
+            "fill": false,
+            "backgroundColor": [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(255, 205, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(201, 203, 207, 0.2)"
+            ],
+            "borderColor": [
+                "rgb(255, 99, 132)",
+                "rgb(255, 159, 64)",
+                "rgb(255, 205, 86)",
+                "rgb(75, 192, 192)",
+                "rgb(54, 162, 235)",
+                "rgb(153, 102, 255)",
+                "rgb(201, 203, 207)"
+            ],
+            "borderWidth": 1
+        }]
+    },
+    "options": {
+        "scales": {
+            "yAxes": [{
+                "ticks": {
+                    "beginAtZero": true
+                }
+            }]
+        }
+    }
+});
+            }
+          </script>
+      </canvas>
+   </div>
+</div>
+	<div id="two" class="ui-content">
+        <div><p>Term Two</p></div>
+			       <table data-role="table"  data-mode="columntoggle" class="learner-tasks ui-shadow table-stroke">
+     <thead>
+       <tr>
+         <th class="label">Task Name :</th>
+         <th>Status :</th>
+         <th>Your Mark:</th>
+        
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <th>Task One </th>
+         <td>Passed</td>
+         <td>67</td>
+       
+       </tr>
+       <tr>
+         <th>Task Two</th>
+         <td>Passed</td>
+         <td>87</td>
+      
+       </tr>
+       <tr>
+         <th>Task Three</th>
+         <td>Failed</td>
+         <td>41</td>
+       
+       </tr>
+       <tr>
+         <th>Task Four</th>
+         <td>Passed</td>
+         <td>67</td>
+        
+       </tr>
+       <tr>
+         <th>Task Five</th>
+         <td>Passed</td>
+         <td>67</td>
+      
+       </tr>
+       <tr>
+         <th>Task Six</th>
+         <td>Passed</td>
+         <td>67</td>
+  
+       </tr>
+       
+       <tr>
+         <th>Task Seven</th>
+         <td>Passed</td>
+         <td>67</td>
+
+       </tr>
+     </tbody>
+ </table>
+ <div>
+      <canvas>
+          <script type="text/javascript">
+              
+          </script>
+      </canvas>
+   </div>
+			    </div>
+                <div id="three" class="ui-content">
+                    <div><p>Term Three</p></div>
+                   <table data-role="table"  data-mode="columntoggle" class="learner-tasks ui-shadow table-stroke">
+     <thead>
+       <tr>
+         <th class="label">Task Name :</th>
+         <th>Status :</th>
+         <th>Your Mark:</th>
+        
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <th>Task One </th>
+         <td>Passed</td>
+         <td>67</td>
+       
+       </tr>
+       <tr>
+         <th>Task Two</th>
+         <td>Passed</td>
+         <td>87</td>
+      
+       </tr>
+       <tr>
+         <th>Task Three</th>
+         <td>Failed</td>
+         <td>41</td>
+       
+       </tr>
+       <tr>
+         <th>Task Four</th>
+         <td>Passed</td>
+         <td>67</td>
+        
+       </tr>
+       <tr>
+         <th>Task Five</th>
+         <td>Passed</td>
+         <td>67</td>
+      
+       </tr>
+       <tr>
+         <th>Task Six</th>
+         <td>Passed</td>
+         <td>67</td>
+  
+       </tr>
+       
+       <tr>
+         <th>Task Seven</th>
+         <td>Passed</td>
+         <td>67</td>
+
+       </tr>
+     </tbody>
+ </table>
+ <div>
+      <canvas>
+          <script type="text/javascript">
+              
+          </script>
+      </canvas>
+   </div>
+                </div>
+
+
+        	</div>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject2">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 2</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	<div data-role="tabs">
+        		<div data-role="navbar" class="listview bg-light">
+			        <ul>
+			          <li><a href="#one1" data-theme="a" data-ajax="false">Term 1</a></li>
+			          <li><a href="#two2" data-theme="a" data-ajax="false">Term 2</a></li>
+			          <li><a href="ajax-content-ignore.html" data-theme="a" data-ajax="false">Term 3</a></li>
+			        </ul>
+    			</div>
+			    <div id="one1" class="ui-content">
+			    <h1>First tab contents</h1>
+			    </div>
+			    <div id="two2" class="ui-content">
+			        <ul data-role="listview">
+			            <li><a href="#">Acura</a></li>
+			            <li><a href="#">Audi</a></li>
+			            <li><a href="#">BMW</a></li>
+			            <li><a href="#">Cadillac</a></li>
+			            <li><a href="#">Ferrari</a></li>
+			        </ul>
+			    </div>
+        	</div>
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject3">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 3</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject4">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 4</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject5">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 5</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject6">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 6</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="Subject7">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">Subject 7</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+
+    <div data-role="page" id="About">
+        <div data-role="header">
+            <nav class="navbar navbar-light bg-transparent">
+                <a href="#dashboard" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-notext">Back</a>
+                <span class="navbar-brand mb-0 h1">About</span>
+            </nav>
+        </div><!-- /header -->
+        <div data-role="body">
+        	
+        </div>
+    </div><!-- /page -->
+    
+</body>
+
+</html>
